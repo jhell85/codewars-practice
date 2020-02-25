@@ -47,3 +47,17 @@ import $ from "jquery";
 // list([])
 // // returns ''
 // Note: all the hashes are pre-validated and will only contain A-Z, a-z, '-' and '.'.
+
+function list(names){
+  let namesString = "";
+  if (names.length === 1){
+    return names;
+  } else if (names.length === 2) {
+    return `${names[0]} & ${names[1]}`;
+  }else {
+    for (let i = 0; i < names.length[-2]; i++) {
+      namesString.append(`${i}, `);
+    }
+    namesString += `${names[-2]} & ${names[-1]}`;
+  }
+}
