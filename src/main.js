@@ -87,3 +87,21 @@ import $ from "jquery";
 // - h = 3, bounce = 1, window = 1.5, result is -1 
 
 // (Condition 2) not fulfilled).
+// -----------------------my solution----------------------------
+
+function bouncingBall(h,  bounce,  window) {
+
+  if(h < 0 || bounce < 0 || bounce > 1 || window > h){
+    return -1;
+  }
+  else{
+    let ball = 1;
+    let bounceHeight = bounce * h;
+    while(bounceHeight > window){
+      bounceHeight = bounce * bounceHeight;
+      ball += 2;
+    }
+    return ball;
+  }
+}
+bouncingBall(3.0, 0.66, 1.5);
