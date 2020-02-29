@@ -50,14 +50,20 @@ import $ from "jquery";
 
 function list(names){
   let namesString = "";
+  
   if (names.length === 1){
     return names;
   } else if (names.length === 2) {
-    return `${names[0]} & ${names[1]}`;
+    return names[0] + " & " + names[1];
   }else {
-    for (let i = 0; i < names.length[-2]; i++) {
-      namesString.append(`${i}, `);
+    for (let i = 0; i < names.length-2; i++) {
+      namesString += names[i] + ", ";
+      namesString += names[names.length-2] + " & " + names[names.length-1];
+
+      
     }
-    namesString += `${names[-2]} & ${names[-1]}`;
+    
   }
+  return namesString;
 }
+console.log(list(["bart", "lisa", "maggie","josh"]));
