@@ -47,23 +47,19 @@ import $ from "jquery";
 // list([])
 // // returns ''
 // Note: all the hashes are pre-validated and will only contain A-Z, a-z, '-' and '.'.
-
-function list(names){
-  let namesString = "";
-  
-  if (names.length === 1){
-    return names;
-  } else if (names.length === 2) {
-    return names[0] + " & " + names[1];
-  }else {
-    for (let i = 0; i < names.length-2; i++) {
-      namesString += names[i] + ", ";
-      namesString += names[names.length-2] + " & " + names[names.length-1];
-
-      
-    }
-    
-  }
-  return namesString;
-}
-console.log(list(["bart", "lisa", "maggie","josh"]));
+// --------------------my solution-----------------------------
+// function list(names){
+//   let namesString = "";
+//   if (names.length === 0){
+//     return namesString
+//   } else if (names.length === 1){
+//     namesString += Object.values(names[0]);
+//   } else {
+//     for (let i = 0; i < names.length-2; i++) {
+//       namesString += Object.values(names[i]) + ", ";
+//     }
+//     namesString += Object.values(names[names.length-2]) + " & " + Object.values(names[names.length-1]);
+//   }
+//   return namesString;
+// }
+// console.log(list([ {name: 'Bart'}, {name: 'Lisa'}, {name: 'Maggie'}, {name: 'Maggie'} ]));
