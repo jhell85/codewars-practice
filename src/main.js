@@ -136,3 +136,15 @@ import $ from "jquery";
 // => 1 + 1
 // => 2
 //----------------------------my solution-----------------------
+function digital_root(n) {
+  let nStringList = String(n).split("");
+  
+  nStringList.forEach(number => {
+    number = parseInt(number);
+  });
+  if(nStringList.length === 1){return nStringList;}
+  else {
+    for
+  }
+}
+digital_root(17);
