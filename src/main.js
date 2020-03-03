@@ -137,14 +137,21 @@ import $ from "jquery";
 // => 2
 //----------------------------my solution-----------------------
 function digital_root(n) {
+
+
   let nStringList = String(n).split("");
-  
-  nStringList.forEach(number => {
-    number = parseInt(number);
-  });
-  if(nStringList.length === 1){return nStringList;}
+
+  if(nStringList.length === 1){
+    let rootNumber = nStringList.join();
+    console.log(rootNumber);
+    return rootNumber;
+  }
   else {
-    for
+    let combineNumbers = 0;
+    for (let i = 0; i < nStringList.length; i++) {
+      combineNumbers += parseInt(nStringList[i]);
+    }
+    return digital_root(combineNumbers);
   }
 }
-digital_root(17);
+console.log(`this is what it's returning -- ${digital_root(177)}`);
